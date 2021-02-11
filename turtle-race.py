@@ -40,14 +40,13 @@ winner = None
 while race:
     for t in turtles:
         t.forward(random.randint(0, 10))
-        x, y = t.position()
-        if x >= 190:
-            winner = t.color()
+        if t.xcor() >= 230:
+            winner = t.pencolor()
             race = False
 
-print(winner[0])
+print(winner)
 
-if winner[0] == bet:
+if winner == bet:
     print("you win!")
 else:
     print("you lose")
